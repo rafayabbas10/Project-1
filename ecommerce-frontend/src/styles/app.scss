@@ -38,6 +38,7 @@
   @import "home";
   @import "cart";
   @import "shipping";
+  @import "login";
   @import "./admin/dashboard";
   @import "./admin/products";
   @import "./admin/chart";
@@ -82,7 +83,11 @@
     }
   }
 
-
+  .heading{
+    @include heading;
+    margin: 1rem 0;
+    text-align: center;
+  }
 
 
 
