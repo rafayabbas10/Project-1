@@ -39,11 +39,31 @@
   @import "cart";
   @import "shipping";
   @import "login";
+  @import "search";
   @import "./admin/dashboard";
   @import "./admin/products";
   @import "./admin/chart";
   @import "./admin/dashboardapp";
   @import "./admin/mediaquery";
+
+  .container {
+    max-width: 1367px;
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+    > h1 {
+      @include heading;
+      margin: 1rem 0;
+      text-align: left;
+    }
+  }
+
+  .heading{
+    @include heading;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
 
   .header {
     @include flex(row,flex-end,stretch,1.2rem);
@@ -83,11 +103,6 @@
     }
   }
 
-  .heading{
-    @include heading;
-    margin: 1rem 0;
-    text-align: center;
-  }
 
 
 
