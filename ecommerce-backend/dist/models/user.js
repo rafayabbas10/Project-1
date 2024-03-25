@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
-const validator_1 = __importDefault(require("validator"));
 const schema = new mongoose_1.default.Schema({
     _id: {
         type: String,
@@ -18,7 +17,7 @@ const schema = new mongoose_1.default.Schema({
     email: {
         type: String,
         unique: [true, "Email already Exists"],
-        required: validator_1.default.default.isEmail,
+        required: [true, "Please enter Email"]
     },
     photo: {
         type: String,
