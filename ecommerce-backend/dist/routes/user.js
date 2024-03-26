@@ -8,4 +8,8 @@ const user_1 = require("../controllers/user");
 const app = express_1.default.Router();
 // route - /api/v1/user/new
 app.post("/new", user_1.newUser);
+// route - /api/v1/user/all
+app.get("/all", user_1.getAllUsers);
+// route - /api/v1/user/dynamicID
+app.route("/:id").get(user_1.getUser).delete(user_1.deleteUser);
 exports.default = app;
